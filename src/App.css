@@ -1,0 +1,220 @@
+/* Declared font faces which are needed for the app. */
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: local('Montserrat-Regular'), url(./fonts/Montserrat-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: local('Montserrat-Bold'), url(./fonts/Montserrat-Bold.ttf) format('truetype')
+}
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: local('Montserrat-SemiBold'), url(./fonts/Montserrat-SemiBold.ttf) format('truetype')
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: #FF6060;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+
+h2 {
+    margin-top: 24px;
+    font-family: 'Montserrat-Bold';
+    color: #fff;
+    font-size: 56px;
+    text-align: center;
+}
+
+h4, p {
+    margin: 0;
+}
+
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pomodoro-container {
+    width: 90%;
+    height: 500px;
+    background-color: #fff;
+    box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.25);
+    border-radius: 60px;
+    margin: 0 auto;
+}
+
+.timer-container {
+    width: 300px;
+    height: 150px;
+    border: 3px solid #FF6060;
+    border-radius: 20px;
+    font-family: 'Montserrat-SemiBold';
+    font-size: 56px;
+    text-align: center;
+}
+
+.timer-actions {
+    width: 380px;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.timer-actions button {
+    width: 100px;
+    height: 48px;
+    background-color: #FF2222;
+    color: #fff;
+    font-family: 'Montserrat-Bold';
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.timer-actions button:disabled {
+    background-color: gray;
+}
+
+.main-interval {
+    width: 250px;
+    height: 150px;
+    border: 3px solid #FF6060;
+    border-radius: 20px;
+}
+
+.main-interval h4 {
+    font-family: 'Montserrat-SemiBold';
+    font-size: 24px;
+}
+
+.interval-length-container {
+    width: 600px;
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.interval-container {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    font-family: 'Montserrat-SemiBold';
+    font-size: 32px;
+}
+
+.interval-container button {
+    width: 45px;
+    height: 45px;
+    background-color: #FF2222;
+    color: #fff;
+    font-family: 'Montserrat-SemiBold';
+    font-size: 32px;
+    border-radius: 8px;
+}
+
+.interval-container button:disabled {
+    background-color: gray;
+}
+
+@media(max-width: 768px){
+    h2 {
+        font-size: 36px;
+    }
+    .main-timer-container {
+        width: 100%;
+    }
+    .timer-container {
+        width: 35%;
+        height: 150px;
+        font-size: 44px;
+    }
+    .timer-actions {
+        width: 50%;
+    }
+    .timer-actions button {
+        width: 25%;
+        height: 35px;
+        font-size: 20px;
+    }
+    .interval-length-container {
+        width: 80%;
+    }
+    .main-interval {
+        width: 45%;
+    }
+    .main-interval h4 {
+        font-size: 24px;
+    }
+    .interval-container {
+        width: 60%;
+        font-size: 28px;
+    }
+    .interval-container button{
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 425px) {
+    h2 {
+        font-size: 34px;
+    }
+    .timer-container {
+        width: 75%;
+        height: 150px;
+        font-size: 40px;
+    }
+    .timer-actions {
+        width: 80%;
+    }
+    .timer-actions button {
+        width: 70px;
+        height: 35px;
+        font-size: 16px;
+    }
+    .interval-length-container {
+        width: 90%;
+    }
+    .main-interval {
+        width: 45%;
+        height: 100px;
+    }
+    .main-interval h4 {
+        font-size: 14px;
+    }
+    .interval-container {
+        width: 80%;
+        font-size: 24px;
+    }
+    .interval-container button{
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+}
