@@ -27,6 +27,16 @@ function Timer(props){
 
     useInterval(decreaseTimer, 1000)
 
+    function playMusic(isSession){        
+        if(isSession) {
+            const audioEl = new Audio('https://www.googleapis.com/drive/v3/files/12hTlGKLI3mctSsBFZr2t6hma9TEns2iL?alt=media&key=AIzaSyCgl42rnBLEUDSl5BDM8bntDfcsHZArU2M')
+            audioEl.play()
+        }else{
+            const audioEl = new Audio('https://www.googleapis.com/drive/v3/files/1bQC9m28JgLTRLwJvIXO8GRvQ__MA4Fqo?alt=media&key=AIzaSyCgl42rnBLEUDSl5BDM8bntDfcsHZArU2M')
+            audioEl.play()
+        }
+    }
+
     function decreaseTimer(){
         if(isPlaying){
             switch(timerSecond){
@@ -34,9 +44,11 @@ function Timer(props){
                     if(props.timerMinute === 0){
                         if(isSession){
                             setIsSession(false)
+                            playMusic(isSession)
                             props.toggleInterval(isSession)
                         }else{
                             setIsSession(true)
+                            playMusic(isSession)
                             props.toggleInterval(isSession)
                         }
                     }else {
